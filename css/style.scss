@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+
+    section {
+        height: 100%;
+        // display: b;;
+
+        &:nth-of-type(1) {
+            background-color: #12bc98;
+            width: 40%;
+
+            figure {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        &:nth-of-type(2) {
+            width: 60%;
+            background-color: #00cc8f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            >div {
+                >div {
+                    margin-bottom: 30px;
+                    color: white;
+
+                    h4 {
+                        font-size: 20px;
+                        font-weight: lighter;
+                    }
+                }
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                p{
+                    display: flex;
+                    justify-content: end;
+                }
+                div {
+                    position: relative;
+                    width: fit-content;
+                    
+                    label {
+                        position: absolute;
+                        top: 50%;
+                        left: 10px;
+                        transform: translateY(-50%);
+
+                        i {
+                            color: #00cc8f;
+                        }
+                    }
+
+                    input {
+                        padding-left: 45px;
+                        width: 500px;
+                        height: 45px;
+                        border: none;
+                        margin: 1px auto;
+                        color: #2f2e41;
+                        transition: 0.5s;
+                        &::placeholder {
+                            color: #838fb8;
+                        }
+
+                        &:focus-visible {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+.submit{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    background-color: #2f2e41;
+    color: #e5fff7;
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 50px;
+    margin-top: 50px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.error{
+    position: absolute !important;
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    transition: .5s;
+}
